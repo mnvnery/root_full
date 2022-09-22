@@ -22,7 +22,7 @@ export default function Home() {
         <div className='relative w-28 h-10 hidden md:block xxl:w-40 xxl:h-20'>
           <Image src={'/logo.svg'} layout='fill' objectFit='contain' alt='logo' />
         </div>
-        <div className='border border-black rounded-full text-center inline-block px-4 py-1 md:py-2 underline uppercase'>Download Case Study</div>
+        <a href="/CrisisCaseStudy.pdf" alt="alt text" target="_blank" rel="noopener noreferrer"><div className='border border-black rounded-full text-center inline-block px-4 py-1 md:py-2 underline uppercase'>Download Case Study</div></a>
       </div>
       <div className='flex space-x-8 my-10 md:hidden'>
         <a href='mailto:hello@rootmedia.co.uk' className='underline'>EMAIL</a>
