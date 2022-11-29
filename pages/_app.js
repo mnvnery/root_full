@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import Footer from '../components/Footer'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
       <meta name='description' content='Root is a complete media planning and buying service for nonprofits—the only one in the UK.'/>
     </Head>
     <div className='bg-purple'><Component {...pageProps} /></div>
+    <Footer/>
     </>
   )
 }

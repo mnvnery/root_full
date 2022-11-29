@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['www.datocms-assets.com'],
+    minimumCacheTTL: 31536000,
+  },
 }
 
 module.exports = nextConfig

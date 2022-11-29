@@ -10,7 +10,6 @@
 
 body {
   font-family: 'Good Sans';
-  background-color: #7a68fb;
 }
 
 a {
@@ -28,4 +27,22 @@ a {
   -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
   -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
   box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+
+.paragraph p {
+  margin-bottom: 25px;
+}
+.paragraph h1 {
+  font-size: 2em;
+  line-height: 1.1;
+  margin-bottom: 35px;
+}
+.h2-text h2 {
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.h2-text p {
+  width: 45%;
 }
