@@ -37,7 +37,7 @@ export default function Home({data, articles}) {
                 <div className='pt-10'>
                     <div className='uppercase text-3xl md:text-4xl'>OUR<br/>JOURNAL</div>
                 </div>
-                <div className='pt-10 ml-8'>
+                <div className='pt-10 ml-8 xxl:ml-14'>
                     <div dangerouslySetInnerHTML={{__html: data.journalText}} className='paragraph md:text-xl md:w-3/4 mb-20'/>
                 </div>
             </TwoColLayout>
@@ -61,7 +61,7 @@ export default function Home({data, articles}) {
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-4 mx-7 gap-6 md:text-lg pb-20'>
+            <div className='grid grid-cols-4 mx-7 xxl:mx-16 gap-6 md:text-lg pb-20'>
                 
                 {articles.slice(1).map((article, i) => (
                     <div key={i}>

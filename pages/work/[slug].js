@@ -23,13 +23,13 @@ export default function CaseStudy({ data, moreProjects, work }) {
             <Header colour='black'/>
             <Logo url='/ROOT-logo-white.svg'/>
             <TwoColLayout cols='grid-cols-[0.25fr_0.75fr]' border='border-t'>
-                <div className='pt-10 border-r border-black text-xl md:text-xl'>
+                <div className='pt-10 border-r border-black text-xl md:text-xl xxl:text-4xl'>
                     <div className='uppercase underline'>{data.client}</div>
                     <div className='uppercase mt-8'>{data.title}</div>
                 </div>
-                <div className='pt-10 ml-8'>
-                    <div className='mb-8 md:text-xl uppercase'>The Challenge</div>
-                    <div dangerouslySetInnerHTML={{__html: data.theChallenge}} className='paragraph md:text-2xl md:w-3/4 mb-20'/>
+                <div className='pt-10 ml-8 xxl:ml-14'>
+                    <div className='mb-8 md:text-xl xxl:text-4xl uppercase'>The Challenge</div>
+                    <div dangerouslySetInnerHTML={{__html: data.theChallenge}} className='paragraph md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4 mb-20'/>
                 </div>
             </TwoColLayout>
             <div className='mx-[15vw]'>
@@ -38,15 +38,15 @@ export default function CaseStudy({ data, moreProjects, work }) {
                 </div>
             </div>
             <TwoColLayout cols='grid-cols-[0.25fr_0.75fr]'>
-                <div className='pt-10 border-r border-black text-xl md:text-xl'>
+                <div className='pt-10 border-r border-black text-xl md:text-xl xxl:text-4xl'>
                     <div></div>
                 </div>
-                <div className='pt-10 ml-8'>
-                    <div className='mb-8 md:text-xl uppercase'>The Ask</div>
-                    <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph md:text-2xl md:w-3/4'/>
+                <div className='pt-10 ml-8 xxl:ml-14'>
+                    <div className='mb-8 md:text-xl xxl:text-4xl uppercase'>The Ask</div>
+                    <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
                 </div>
             </TwoColLayout>
-            <div className='md:grid grid-cols-2 mx-7 gap-7 mb-12'>
+            <div className='md:grid grid-cols-2 mx-7 xxl:mx-16 gap-7 mb-12'>
                 {data.images.slice(1, 3).map((img, i) => (
                     <div key={i} className='relative h-[65vh]'>
                         <Image src={img.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
@@ -54,23 +54,23 @@ export default function CaseStudy({ data, moreProjects, work }) {
                 ))}
             </div>
             <TwoColLayout cols='grid-cols-[0.5fr_0.5fr]' border='border-t'>
-                <div className='pt-10 ml-8 border-r border-black text-xl md:text-xl'>
-                    <div className='mb-8 md:text-xl uppercase'>What We Did</div>
-                    <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph md:text-2xl md:w-3/4'/>
+                <div className='pt-10 ml-8 xxl:ml-14 border-r border-black text-xl md:text-xl xxl:text-4xl'>
+                    <div className='mb-8 md:text-xl xxl:text-4xl uppercase'>What We Did</div>
+                    <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
                 </div>
-                <div className='pt-10 ml-8'>
-                    <div className='mb-8 md:text-xl uppercase'>How we did it</div>
-                    <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph md:text-2xl md:w-3/4'/>
+                <div className='pt-10 ml-8 xxl:ml-14'>
+                    <div className='mb-8 md:text-xl xxl:text-4xl uppercase'>How we did it</div>
+                    <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
                 </div>
             </TwoColLayout>
-            <div className='flex justify-between mx-7 py-16 text-2xl'>
+            <div className='flex justify-between mx-7 xxl:mx-16 py-16 text-2xl xxl:text-4xl'>
                 <Link href={moreProjects[0].slug}><a className='underline'>Previous</a></Link>
                 <Link href={moreProjects[1].slug}><a className='underline'>Next</a></Link>
             </div>
         </div>
         <div className='bg-black'>
             <div className='bg-grey pb-[30vh] rounded-bl-[16.5rem] pt-14'>
-                <div className='mx-7'>
+                <div className='mx-7 xxl:mx-16'>
                     <WorkList work={work}/>
                 </div>
             </div>

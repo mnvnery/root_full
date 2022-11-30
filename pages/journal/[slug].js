@@ -41,7 +41,7 @@ export default function Article({ data, moreArticles }) {
             <div className='mx-[15vw] mb-40'>
                 <div dangerouslySetInnerHTML={{__html: data.articleBody}} className='paragraph md:text-lg gap-12 columns-2'/>
             </div>
-            <div className='flex justify-between mx-7 pb-16 text-2xl'>
+            <div className='flex justify-between mx-7 xxl:mx-16 pb-16 text-2xl'>
                 <Link href={moreArticles[0].slug}><a className='underline'>Previous</a></Link>
                 <Link href={moreArticles[1].slug}><a className='underline'>Next</a></Link>
             </div>

@@ -72,7 +72,7 @@ const MobileNav = ({colour}) => {
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between mx-6 py-6 border-b border-black mb-5">
+        <div className="flex items-center justify-between mx-6 py-6 border-b border-black mb-5 xxl:mx-16">
           <Link href="/" className="w-3/5 md:w-1/4" onClick={onToggleNav}>
             <div className="relative w-7 h-12">
               <Image src={'/small_logo_black.svg'} layout='fill' objectFit='contain' />
@@ -106,7 +106,7 @@ const MobileNav = ({colour}) => {
                 >
                   <a onClick={onToggleNav}>
                   <div
-                    className={`px-4 py-1 2xl:py-10 text-black hover:text-white text-5xl font-bold text-center tracking-tight md:text-7xl`}
+                    className={`px-4 py-1 2xl:py-10 text-black hover:text-white text-5xl font-bold text-center tracking-tight md:text-7xl xxl:text-9xl xxl:py-5`}
                   >
                     {link.title}
                   </div>
@@ -115,10 +115,10 @@ const MobileNav = ({colour}) => {
               </motion.div>
             ))}
             </motion.div>
-            <div className="grid grid-cols-3 items-center border-t border-black text-black my-8 mx-6 pt-4">
-                <div>HELPING THOSE <br/>
+            <div className="flex justify-between md:grid grid-cols-3 items-center border-t border-black text-black my-8 mx-6 pt-4 xxl:mx-16 xxl:text-3xl xxl:pt-6">
+                <div className='hidden md:block'>HELPING THOSE <br/>
                 THAT DO GOOD, DO BETTER.</div>
-                <div className='relative w-full h-14'>
+                <div className='relative w-24 md:w-full h-14 xxl:h-28'>
                   <Image src='/media_doing_good.svg' layout='fill' objectFit='contain'/>
                 </div>
                 <div className='justify-self-end'><div className='border border-black px-3 inline-block rounded-lg'>GET IN TOUCH</div></div>
