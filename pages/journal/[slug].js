@@ -23,13 +23,13 @@ export default function Article({ data, moreArticles }) {
             <Header colour='white'/>
             <Logo url='/ROOT-logo-black.svg'/>
             <TwoColLayout cols='grid-cols-[0.3fr_0.7fr]' border='border-t border-white'>
-                <div className='uppercase text-2xl md:text-3xl pt-10'>
+                <div className='uppercase text-2xl md:text-3xl pt-10 xxl:text-5xl'>
                     <p>{new Date(data.date).toLocaleDateString('default', {weekday: 'long'})}</p>
                     <p>{new Date(data.date).toLocaleDateString('default', {month: 'long'})} {new Date(data.date).getDate()}</p>
                     <p>{new Date(data.date).getFullYear()}</p>
                     <div className='mt-10'>{data.title}</div>
                 </div>
-                <div className='pt-10 ml-40 text-2xl md:text-4xl'>
+                <div className='pt-10 ml-40 text-2xl md:text-4xl xxl:text-6xl'>
                     <div dangerouslySetInnerHTML={{__html: data.firstParagraph}} className='paragraph md:w-3/4 mb-20'/>
                 </div>
             </TwoColLayout>

@@ -35,17 +35,17 @@ export default function Home({data, articles}) {
             <Logo url='/ROOT-logo-black.svg'/>
             <TwoColLayout cols='grid-cols-[0.3fr_0.7fr]' border='border-t border-white'>
                 <div className='pt-10'>
-                    <div className='uppercase text-3xl md:text-4xl'>OUR<br/>JOURNAL</div>
+                    <div className='uppercase text-3xl md:text-4xl xxl:text-6xl xxl:leading-tight'>OUR<br/>JOURNAL</div>
                 </div>
                 <div className='pt-10 ml-8 xxl:ml-14'>
-                    <div dangerouslySetInnerHTML={{__html: data.journalText}} className='paragraph md:text-xl md:w-3/4 mb-20'/>
+                    <div dangerouslySetInnerHTML={{__html: data.journalText}} className='paragraph md:text-xl md:w-3/4 mb-20 xxl:text-4xl xxl:leading-tight'/>
                 </div>
             </TwoColLayout>
             <div className='mx-[15vw] mb-20'>
                 <div className='relative h-[70vh] mb-8'>
                     <Image src={firstArticle.image.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                 </div>
-                <div className='grid grid-cols-3 md:text-lg'>
+                <div className='grid grid-cols-3 md:text-lg xxl:text-3xl xxl:leading-tight'>
                     <div>
                         <p>{new Date(firstArticle.date).toLocaleDateString('default', {weekday: 'long'})}</p>
                         <p>{new Date(firstArticle.date).toLocaleDateString('default', {month: 'long'})} {new Date(firstArticle.date).getDate()}</p>
@@ -61,7 +61,7 @@ export default function Home({data, articles}) {
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-4 mx-7 xxl:mx-16 gap-6 md:text-lg pb-20'>
+            <div className='grid grid-cols-4 mx-7 xxl:mx-16 gap-6 md:text-lg pb-20 xxl:text-3xl'>
                 
                 {articles.slice(1).map((article, i) => (
                     <div key={i}>
