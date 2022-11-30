@@ -25,7 +25,20 @@ export async function getStaticProps() {
 }
 
 export default function Clients({data, work}) {
-    console.log(data.services)
+    var cars = data.clientList,
+    result = cars.reduce(function (r, a) {
+        r[a.startLetter] = r[a.startLetter] || [];
+        r[a.startLetter].push(a);
+        return r;
+    }, Object.create(null));
+
+    for (const [key, value] of Object.entries(result)) {
+        console.log(`${key}`);
+        const finalValue = value
+        for (const [key, value] of Object.entries(finalValue)) {
+            console.log(value)
+        }
+    }
     return (
         <>
             <div className='bg-yellow text-black'>
@@ -37,10 +50,22 @@ export default function Clients({data, work}) {
                     </div>
                     <div className='pt-10 md:ml-8 xxl:ml-14'>
                         <div dangerouslySetInnerHTML={{__html: data.clientsText}} className='paragraph md:text-xl md:w-3/4 mb-20 xxl:text-4xl xxl:leading-tight'/>
-                        <div className='columns-2 md:columns-3 space-y-2 xxl:text-4xl'>
-                            {data.clientList.map((client, i) => (
-                                <div key={i}>{client.name}</div>
-                            ))}
+                        <div className='columns-2 md:columns-3 md:text-xl xxl:text-4xl xxl:leading-snug'>
+                            {
+                                Object.entries(result).map(([key, val]) => {
+                                    const value = val
+                                    console.log(value)
+                                    return (
+                                    <div key={key} className='inline-block mb-4 xxl:mb-10'>
+                                        <div className='border-b border-black mr-5'>{key}</div>
+                                        {value.map((entry, i) => (
+                                            <div key={i} className='mr-5'>{entry.name}</div>
+                                        ))}
+                                    </div>
+                                    )
+                                })
+                            }
+                            
                         </div>
                     </div>
                 </TwoColLayout>
