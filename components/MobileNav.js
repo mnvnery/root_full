@@ -121,7 +121,7 @@ const MobileNav = ({colour}) => {
                 <div className='relative w-24 md:w-full h-14 xxl:h-28'>
                   <Image src='/media_doing_good.svg' layout='fill' objectFit='contain'/>
                 </div>
-                <div className='justify-self-end'><div className='border border-black px-3 inline-block rounded-lg'>GET IN TOUCH</div></div>
+                <div className='justify-self-end'><a href={`mailto:${siteMetadata.email}`}><div className='border border-black px-3 inline-block rounded-lg'>GET IN TOUCH</div></a></div>
             </div>
 
       </div>

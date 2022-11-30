@@ -24,7 +24,7 @@ export default function CaseStudies({work}) {
     return (
         <>
         <div className='bg-black'>
-            <div className='bg-red text-black rounded-bl-[16.5rem]'>
+            <div className='bg-red text-black  rounded-bl-[8rem]  md:rounded-bl-[16.5rem]'>
                 <Header colour='black'/>
                 <Logo url='/ROOT-logo-white.svg'/>
                 <div className='mx-7 xxl:mx-16'>
@@ -52,7 +52,7 @@ export default function CaseStudies({work}) {
                             <div className='relative w-full h-[60vh]'>
                                 <Image src={proj.thumbnail.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                             </div>
-                            <div className='rounded-2xl border border-black p-2 h-fit hover:bg-white xxl:text-3xl xxl:p-8'>
+                            <div className='w-fit rounded-2xl border border-black p-2 h-fit hover:bg-white xxl:text-3xl xxl:p-8'>
                                 <Link href={`/work/${proj.slug}`}>
                                     <a>
                                         <div className='uppercase'>{proj.client}</div>
@@ -67,7 +67,7 @@ export default function CaseStudies({work}) {
                 ))}
                 </div>
                 <div className='flex justify-end mx-7 xxl:mx-16 py-10'>
-                    <div className='relative h-[50vh] w-[50vw]'>
+                    <div className='relative h-[30vh] md:h-[50vh] w-full md:w-[50vw]'>
                         <Image src='/work-illustration.svg' objectFit='contain' layout='fill'/>
                     </div>
                 </div>

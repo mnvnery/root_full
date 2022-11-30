@@ -53,7 +53,7 @@ export default function Clients({data, work}) {
 
             
         <div className='bg-black'>
-            <div className='bg-grey pb-[30vh] rounded-bl-[16.5rem] pt-14'>
+            <div className='bg-grey pb-[30vh] rounded-bl-[8rem]  md:rounded-bl-[16.5rem] pt-14'>
                 <div className='mx-7 xxl:mx-16'>
                     <WorkList work={work}/>
                 </div>

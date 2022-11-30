@@ -28,7 +28,7 @@ export default function About({data, work}) {
     return (
         <>
         <div className='bg-grey'>
-            <div className='bg-pink text-black rounded-bl-[8rem] md:rounded-bl-[16.5rem] mb-10'>
+            <div className='bg-pink text-black  rounded-bl-[8rem]  md:rounded-bl-[16.5rem] mb-10'>
                 <Header colour='black'/>
                 <Logo url='/ROOT-logo-orange.svg'/>
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
@@ -90,7 +90,7 @@ export default function About({data, work}) {
             
         </div>
         <div className='bg-black mt-[-5px]'>
-            <div className='bg-grey pb-[30vh] rounded-bl-[16.5rem]'>
+            <div className='bg-grey pb-[30vh] rounded-bl-[8rem]  md:rounded-bl-[16.5rem]'>
                 <div className='mx-7 xxl:mx-16'>
                     <WorkList work={work}/>
                 </div>

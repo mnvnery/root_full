@@ -30,7 +30,7 @@ export default function Home({data, work}) {
   return (
     <>
     <div className='bg-purple'>
-      <div className='bg-black text-white rounded-bl-[8rem] md:rounded-bl-[16.5rem]'>
+      <div className='bg-black text-white  rounded-bl-[8rem]  md:rounded-bl-[16.5rem]'>
         <Header colour='white'/>
         <Logo url='/ROOT-logo.svg'/>
         <div className='md:grid grid-cols-[1fr_2.5fr] border-t border-white mx-7 xxl:mx-16'>
@@ -78,7 +78,7 @@ export default function Home({data, work}) {
       </div>
     </div>
     <div className='bg-black'>
-      <div className='bg-grey pt-14 pb-3 md:pb-8 rounded-bl-[8rem] md:rounded-bl-[16.5rem]'>
+      <div className='bg-grey pt-14 pb-3 md:pb-8  rounded-bl-[8rem]  md:rounded-bl-[16.5rem]'>
         <TwoColLayout cols='grid-cols-2 md:grid-cols-3' border='border-t'>
           <div className='pt-10 border-r border-black'>
             <div className='uppercase text-sm md:text-lg xxl:text-2xl mb-4 xxl:mb-8'>Our Origins</div>
