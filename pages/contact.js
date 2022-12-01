@@ -32,9 +32,11 @@ export default function Contact({data, work, team}) {
   console.log(data)
     return (
         <>
+        <div className='bg-black'>
+            <Header colour='white' bgColour='black'/>
+            <Logo url='/ROOT-logo.svg'/>
             <div className='bg-black text-white'>
-                <Header colour='white'/>
-                <Logo url='/ROOT-logo.svg'/>
+                
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t border-white mb-14'>
                     <div className='pt-10 md:border-r border-white'>
                         <div className='uppercase text-3xl md:text-4xl xxl:text-6xl'>Contact</div>
@@ -82,6 +84,7 @@ export default function Contact({data, work, team}) {
                 <Image src='/media-doing-good.svg' layout='fill' objectFit='contain'/>
               </div>
             </div>
+        </div>
         </>
     )
 }

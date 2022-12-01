@@ -41,9 +41,10 @@ export default function Clients({data, work}) {
     }
     return (
         <>
+        <div className='bg-yellow'>
+            <Header colour='black' bgColour='yellow'/>
+            <Logo url='/ROOT-logo-orange.svg'/>
             <div className='bg-yellow text-black'>
-                <Header colour='black'/>
-                <Logo url='/ROOT-logo-orange.svg'/>
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
                     <div className='pt-10 md:border-r border-black'>
                         <div className='uppercase text-3xl md:text-4xl xxl:text-6xl'>Clients</div>
@@ -70,7 +71,7 @@ export default function Clients({data, work}) {
                     </div>
                 </TwoColLayout>
                 <div className='px-7 xxl:px-16 pb-10 flex justify-end'>
-                    <div className='relative w-[35vw] h-[65vh]'>
+                    <div className='relative w-[35vw] h-[65vh] z-0'>
                         <Image src={data.illustration.url} objectFit="contain" objectPosition="center bottom" layout='fill' />
                     </div>
                 </div>
@@ -83,6 +84,7 @@ export default function Clients({data, work}) {
                     <WorkList work={work}/>
                 </div>
             </div>
+        </div>
         </div>
         </>
     )

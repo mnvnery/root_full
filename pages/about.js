@@ -27,10 +27,13 @@ export async function getStaticProps() {
 export default function About({data, work}) {
     return (
         <>
+        <div className='bg-pink'>
+        <Header colour='black' bgColour='pink'/>
+        <Logo url='/ROOT-logo-orange.svg'/>
         <div className='bg-grey'>
             <div className='bg-pink text-black  rounded-bl-[8rem]  md:rounded-bl-[16.5rem] mb-10'>
-                <Header colour='black'/>
-                <Logo url='/ROOT-logo-orange.svg'/>
+                
+                
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
                     <div className='pt-5 md:pt-10 md:border-r border-black'>
                         <div className='uppercase text-xl md:text-4xl xxl:text-6xl'>About</div>
@@ -95,6 +98,7 @@ export default function About({data, work}) {
                     <WorkList work={work}/>
                 </div>
             </div>
+        </div>
         </div>
         </>
     )

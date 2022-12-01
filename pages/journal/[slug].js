@@ -20,7 +20,7 @@ export default function Article({ data, moreArticles }) {
     return (
         <>
         <div className='bg-darkPurple text-white'>
-            <Header colour='white'/>
+            <Header colour='white' bgColour='darkPurple'/>
             <Logo url='/ROOT-logo-black.svg'/>
             <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t border-white'>
                 <div className='uppercase text-2xl md:text-3xl pt-10 xxl:text-5xl xxl:leading-tight'>
