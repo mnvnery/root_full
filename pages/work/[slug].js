@@ -58,11 +58,11 @@ export default function CaseStudy({ data, moreProjects, work }) {
                 <TwoColLayout cols='md:grid-cols-[0.5fr_0.5fr]' border='border-t'>
                     <div className='pt-10 md:ml-8 xxl:ml-14 md:border-r border-black text-xl md:text-xl xxl:text-4xl'>
                         <div className='mb-8 md:text-lg xxl:text-4xl uppercase'>What We Did</div>
-                        <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
+                        <div dangerouslySetInnerHTML={{__html: data.whatWeDid}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
                     </div>
                     <div className='border-y border-black md:border-y-0 pt-10 md:ml-8 text-xl xxl:ml-14'>
                         <div className='mb-8 md:text-lg xxl:text-4xl uppercase'>How we did it</div>
-                        <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
+                        <div dangerouslySetInnerHTML={{__html: data.howWeDidIt}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
                     </div>
                 </TwoColLayout>
                 <div className='flex justify-between mx-7 xxl:mx-16 py-16 text-2xl xxl:text-4xl'>
