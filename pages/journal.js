@@ -38,19 +38,14 @@ export default function Home({data, articles}) {
                     <div className='uppercase text-3xl md:text-4xl xxl:text-6xl xxl:leading-tight'>OUR<br/>JOURNAL</div>
                 </div>
                 <div className='pt-10 md:ml-8 xxl:ml-14'>
-                    <div dangerouslySetInnerHTML={{__html: data.journalText}} className='paragraph md:text-xl md:w-3/4 mb-20 xxl:text-4xl xxl:leading-tight'/>
+                    <div dangerouslySetInnerHTML={{__html: data.journalText}} className='paragraph md:text-xl md:w-3/4 mb-14 xxl:mb-20 xxl:text-4xl xxl:leading-tight'/>
                 </div>
             </TwoColLayout>
-            <div className='mx-7 md:mx-[15vw] mb-12 md:mb-20'>
-                <div className='relative h-[40vh] md:h-[70vh] mb-8'>
+            <div className='mx-7 md:mx-[25vw] mb-12 xxl:mb-20'>
+                <div className='relative h-[30vh] md:h-[50vh] mb-8'>
                     <Image src={firstArticle.image.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                 </div>
-                <div className='grid md:grid-cols-3 md:text-lg xxl:text-3xl xxl:leading-tight'>
-                    <div className='hidden md:block'>
-                        <p>{new Date(firstArticle.date).toLocaleDateString('default', {weekday: 'long'})}</p>
-                        <p>{new Date(firstArticle.date).toLocaleDateString('default', {month: 'long'})} {new Date(firstArticle.date).getDate()}</p>
-                        <p>{new Date(firstArticle.date).getFullYear()}</p>
-                    </div>
+                <div className='grid md:grid-cols-[2fr_1fr] md:text-lg xxl:text-3xl xxl:leading-tight'>
                     <div>
                         <div>{firstArticle.title}</div>
                         <div>–</div>
@@ -63,9 +58,9 @@ export default function Home({data, articles}) {
             </div>
             <div className='grid grid-cols-2 md:grid-cols-4 mx-7 xxl:mx-16 gap-6 md:text-lg pb-20 xxl:text-3xl'>
                 
-                {articles.slice(1, 5).map((article, i) => (
+                {articles.slice(1, 4).map((article, i) => (
                     <div key={i}>
-                        <div className='relative h-[25vh] md:h-[40vh] mb-8'>
+                        <div className='relative h-[20vh] md:h-[40vh] xxl:h-[30vh] mb-8'>
                             <Image src={article.image.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                         </div>
                         <div>{article.title}</div>

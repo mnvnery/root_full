@@ -26,7 +26,7 @@ export default function CaseStudy({ data, moreProjects, work }) {
                 
                 <TwoColLayout cols='md:grid-cols-[0.25fr_0.75fr]' border='border-t'>
                     <div className='border-b md:border-b-0 pt-10 md:border-r border-black text-xl md:text-xl xxl:text-4xl'>
-                        <div className='uppercase underline'>{data.client}</div>
+                        <div className='uppercase underline mr-5'>{data.client}</div>
                         <div className='uppercase mt-2 mb-10 md:mt-8'>{data.title}</div>
                     </div>
                     <div className='pt-10 md:ml-8 text-xl xxl:ml-14'>
@@ -49,7 +49,7 @@ export default function CaseStudy({ data, moreProjects, work }) {
                     </div>
                 </TwoColLayout>
                 <div className='grid md:grid-cols-2 mx-7 xxl:mx-16 gap-7 mb-12'>
-                    {data.images.slice(1, 3).map((img, i) => (
+                    {data.images.slice(0, 2).map((img, i) => (
                         <div key={i} className='relative h-[40vh] md:h-[65vh]'>
                             <Image src={img.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                         </div>
