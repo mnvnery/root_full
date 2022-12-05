@@ -34,7 +34,7 @@ export async function getStaticProps() {
 export default function Home({data, work}) {
   return (
     <>
-    <div className='bg-black'>
+    <div className='bg-black w-full overflow-x-hidden'>
       <Header colour='white' bgColour='black' />
       <Logo url='/ROOT-logo.svg'/>
       <div className='bg-purple'>
@@ -143,7 +143,7 @@ export default function Home({data, work}) {
             </div>
           ))}
         </div>
-        <a href={`mailto:${siteMetadata.email}`}><div className='md:text-2xl xxl:text-4xl mb-10 border border-white rounded-xl xxl:rounded-3xl uppercase inline-block px-3 py-2 xxl:px-8 xxl:py-6'>GET IN TOUCH +</div></a>
+        <a href={`mailto:${siteMetadata.email}`}><div className='md:text-2xl xxl:text-4xl mb-10 border border-white rounded-xl hover:bg-white hover:text-black xxl:rounded-3xl uppercase inline-block px-3 py-2 xxl:px-8 xxl:py-6'>GET IN TOUCH +</div></a>
       </div>
       <div className='bg-black px-7 xxl:px-16'>
         <SoftMotion>

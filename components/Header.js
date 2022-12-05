@@ -125,7 +125,7 @@ const Header = ({colour, bgColour}) => {
                 >
                     <a onClick={onToggleNav}>
                     <div
-                    className={`px-4 py-1 2xl:py-10 text-black hover:text-white text-5xl font-bold text-center tracking-tight md:text-7xl xxl:text-9xl xxl:py-5`}
+                    className={`px-4 py-1 md:py-3 text-black hover:text-white text-5xl font-bold text-center tracking-tight md:text-7xl xxl:text-9xl xxl:py-5`}
                     >
                     {link.title}
                     </div>
@@ -140,7 +140,7 @@ const Header = ({colour, bgColour}) => {
                 <div className='relative w-24 md:w-full h-14 xxl:h-28'>
                     <Image src='/media_doing_good.svg' layout='fill' objectFit='contain'/>
                 </div>
-                <div className='justify-self-end'><a href={`mailto:${siteMetadata.email}`}><div className='border border-black px-3 inline-block rounded-lg'>GET IN TOUCH</div></a></div>
+                <div className='justify-self-end'><a href={`mailto:${siteMetadata.email}`}><div className='border border-black px-3 inline-block rounded-lg hover:bg-black hover:text-red'>GET IN TOUCH</div></a></div>
             </div>
 
         </div>
