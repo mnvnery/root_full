@@ -37,6 +37,7 @@ export default function CaseStudy({ data, moreProjects, work }) {
                 <div className='mx-7 md:mx-[15vw]'>
                     <div className='relative h-[40vh] md:h-[70vh]'>
                         <Image src={data.thumbnail.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
+                        <div className='text-white absolute bottom-4 left-6'>{data.thumbnailCredit}</div>
                     </div>
                 </div>
                 <TwoColLayout cols='md:grid-cols-[0.25fr_0.75fr]'>
@@ -51,7 +52,8 @@ export default function CaseStudy({ data, moreProjects, work }) {
                 <div className='grid md:grid-cols-2 mx-7 xxl:mx-16 gap-7 mb-12'>
                     {data.images.slice(0, 2).map((img, i) => (
                         <div key={i} className='relative h-[40vh] md:h-[65vh]'>
-                            <Image src={img.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
+                            <Image src={img.image.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
+                            <div className='text-white absolute bottom-4 left-6'>{img.credit}</div>
                         </div>
                     ))}
                 </div>
