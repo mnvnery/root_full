@@ -1,5 +1,6 @@
 import Image from "next/image"
 import siteMetadata from "../data/siteMetadata"
+import Link from "next/link"
 
 const Footer = () => {
     return (
@@ -7,9 +8,11 @@ const Footer = () => {
             <div className="grid md:grid-cols-[1fr_1fr_0.7fr] border-y border-white text-lg md:text-3xl xxl:text-5xl xxl:leading-tight">
                 <div className="md:pt-10 pb-5 md:pb-32 flex flex-col justify-between">
                     <div>
-                        <div className="relative w-24 md:w-52 h-16 md:mb-20 xxl:w-60 xxl:h-24">
+                        <Link href='/'>
+                        <div className="relative w-24 md:w-52 h-16 md:mb-20 xxl:w-60 xxl:h-24 cursor-pointer">
                             <Image src='/logo-white.svg' objectFit='contain' layout='fill'/>
                         </div>
+                        </Link>
                     </div>
                     <div className="mr-4 ">
                         86 Princess Street<br/>
@@ -29,8 +32,8 @@ const Footer = () => {
                     <div></div>
                     <div>
                     <div><a href={siteMetadata.twitter} target="_blank" rel="noreferrer" className="hover:underline">Twitter</a></div>
-                    <div><a href={siteMetadata.linkedin} target="_blank" rel="noreferrer" className="hover:underline">Linkedin</a></div>
                     <div><a href={siteMetadata.instagram} target="_blank" rel="noreferrer" className="hover:underline">Instagram</a></div>
+                    <div><a href={siteMetadata.linkedin} target="_blank" rel="noreferrer" className="hover:underline">Linkedin</a></div>
                     </div>
                 </div>
             </div>

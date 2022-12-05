@@ -47,7 +47,7 @@ export default function Clients({data, work}) {
             <div className='bg-yellow text-black'>
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
                     <div className='pt-10 md:border-r border-black'>
-                        <div className='uppercase text-3xl md:text-4xl xxl:text-6xl'>Clients</div>
+                        <div className='uppercase text-3xl md:text-4xl xxl:text-6xl'>Client<br/>Experience</div>
                     </div>
                     <div className='pt-10 md:ml-8 xxl:ml-14'>
                         <div dangerouslySetInnerHTML={{__html: data.clientsText}} className='paragraph md:text-xl md:w-3/4 mb-20 xxl:text-4xl xxl:leading-tight'/>
@@ -71,7 +71,7 @@ export default function Clients({data, work}) {
                     </div>
                 </TwoColLayout>
                 <div className='px-7 xxl:px-16 pb-10 flex justify-end'>
-                    <div className='relative w-[35vw] h-[65vh] z-0'>
+                    <div className='relative h-[25vh] w-full md:w-[55vw] md:h-[50vh] mt-10 z-0'>
                         <Image src={data.illustration.url} objectFit="contain" objectPosition="center bottom" layout='fill' />
                     </div>
                 </div>

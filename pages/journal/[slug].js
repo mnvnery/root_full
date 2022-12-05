@@ -24,16 +24,13 @@ export default function Article({ data, moreArticles }) {
             <Logo url='/ROOT-logo-black.svg'/>
             <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t border-white'>
                 <div className='uppercase text-2xl md:text-3xl pt-10 xxl:text-5xl xxl:leading-tight'>
-                    <p>{new Date(data.date).toLocaleDateString('default', {weekday: 'long'})}</p>
-                    <p>{new Date(data.date).toLocaleDateString('default', {month: 'long'})} {new Date(data.date).getDate()}</p>
-                    <p>{new Date(data.date).getFullYear()}</p>
-                    <div className='mt-10'>{data.title}</div>
+                    <div>{data.title}</div>
                 </div>
-                <div className='border-t border-white mt-10 md:mt-0 md:border-t-0 pt-10 md:ml-40 text-2xl md:text-4xl xxl:text-6xl'>
-                    <div dangerouslySetInnerHTML={{__html: data.firstParagraph}} className='paragraph md:w-3/4 mb-10 md:mb-20'/>
+                <div className='border-t border-white mt-10 md:mt-0 md:border-t-0 pt-10 md:ml-40 md:text-lg xxl:text-4xl xxl:leading-tight'>
+                    <div dangerouslySetInnerHTML={{__html: data.firstParagraph}} className='paragraph md:w-3/4 mb-10 md:mb-14'/>
                 </div>
             </TwoColLayout>
-            <div className='mx-7 md:mx-[15vw] mb-10 md:mb-20'>
+            <div className='mx-7 md:mx-[15vw] mb-10 md:mb-14'>
                 <div className='relative h-[40vh] md:h-[80vh] mb-8'>
                     <Image src={data.image.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                 </div>

@@ -46,8 +46,9 @@ export default function About({data, work}) {
                         </div>
                     </div>
                 </TwoColLayout>
+                <div id='origins' className='block relative top-[-5em] invisible'></div>
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
-                    <div className='pt-5 md:pt-10 md:border-r border-black'>
+                    <div className='pt-5 md:pt-10 md:border-r border-black' >
                         <div className='uppercase text-xl md:text-4xl xxl:text-6xl'>OUR<br/>ORIGINS</div>
                     </div>
                     <div className='pt-8 md:pt-10 md:ml-8 xxl:ml-14'>
@@ -62,6 +63,7 @@ export default function About({data, work}) {
                         <Image src={data.originsImage2.url} objectFit='contain' layout='fill'/>
                     </div>
                 </div>
+                <div id='philosophy' className='block relative top-[-5em] invisible'></div>
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
                     <div className='pt-5 md:pt-10 md:border-r border-black'>
                         <div className='uppercase text-xl md:text-4xl xxl:text-6xl'>OUR<br/>PHILOSOPHY</div>
@@ -71,6 +73,7 @@ export default function About({data, work}) {
                     </div>
                 </TwoColLayout>
             </div>
+            <div id='services' className='block relative top-[-5em] invisible'></div>
             <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
                 <div className='pt-10 md:border-r border-black'>
                     <div className='uppercase text-xl md:text-4xl xxl:text-6xl'>OUR<br/>SERVICES</div>
@@ -88,6 +91,7 @@ export default function About({data, work}) {
             <div className='px-7 xxl:px-16 pb-10 xxl:pb-20'>
                 <div className='relative w-full h-[40vh] md:h-[95vh] xxl:h-[80vh]'>
                     <Image src={data.servicesImage.url} objectFit="cover" objectPosition="center bottom" layout='fill' className='rounded-3xl'/>
+                    <div className='text-white absolute bottom-4 left-5'>{data.imageCredit}</div>
                 </div>
             </div>
             
@@ -98,7 +102,7 @@ export default function About({data, work}) {
                     <WorkList work={work}/>
                 </div>
             </div>
-        </div>
+        </div>  
         </div>
         </>
     )
