@@ -76,13 +76,13 @@ export default function CaseStudy({ data, moreProjects, work }) {
                     <div className='pt-10 md:ml-10 xxl:ml-14 md:border-r border-black text-xl md:text-xl xxl:text-4xl'>
                         <SoftMotion>
                             <div className='mb-8 md:text-lg xxl:text-4xl uppercase'>What We Did</div>
-                            <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
+                            <div dangerouslySetInnerHTML={{__html: data.whatWeDid}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
                         </SoftMotion>
                     </div>
                     <div className='border-y border-black md:border-y-0 pt-10 md:ml-10 text-xl xxl:ml-14'>
                         <SoftMotion>
                             <div className='mb-8 md:text-lg xxl:text-4xl uppercase'>How we did it</div>
-                            <div dangerouslySetInnerHTML={{__html: data.theAsk}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
+                            <div dangerouslySetInnerHTML={{__html: data.howWeDidIt}} className='paragraph pb-4 md:text-2xl xxl:text-6xl xxl:leading-tight md:w-3/4'/>
                         </SoftMotion>
                     </div>
                 </TwoColLayout>
