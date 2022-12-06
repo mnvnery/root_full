@@ -6,6 +6,9 @@ import Logo from '../components/Logo'
 import Button from '../components/Button'
 import TwoColLayout from '../components/TwoColLayout'
 import WorkList from '../components/WorkList'
+import SoftMotion from '../components/SoftMotion'
+import RightMotion from '../components/RightMotion'
+import LeftMotion from '../components/LeftMotion'
 
 export async function getStaticProps() {
     const data = await request({
@@ -41,15 +44,18 @@ export default function Clients({data, work}) {
     }
     return (
         <>
-        <div className='bg-yellow'>
+        <div className='bg-yellow w-full overflow-x-hidden'>
             <Header colour='black' bgColour='yellow'/>
             <Logo url='/ROOT-logo-orange.svg'/>
             <div className='bg-yellow text-black'>
                 <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t'>
                     <div className='pt-10 md:border-r border-black'>
-                        <div className='uppercase text-3xl md:text-4xl xxl:text-6xl'>Client<br/>Experience</div>
+                        <SoftMotion>
+                            <div className='uppercase text-3xl md:text-4xl xxl:text-6xl'>Client<br/>Experience</div>
+                        </SoftMotion>
                     </div>
-                    <div className='pt-10 md:ml-8 xxl:ml-14'>
+                    <div className='pt-10 md:ml-10 xxl:ml-14'>
+                        <SoftMotion>
                         <div dangerouslySetInnerHTML={{__html: data.clientsText}} className='paragraph md:text-xl md:w-3/4 mb-20 xxl:text-4xl xxl:leading-tight'/>
                         <div className='columns-2 md:columns-3 md:text-xl xxl:text-4xl xxl:leading-snug'>
                             {
@@ -68,12 +74,15 @@ export default function Clients({data, work}) {
                             }
                             
                         </div>
+                        </SoftMotion>
                     </div>
                 </TwoColLayout>
                 <div className='px-7 xxl:px-16 pb-10 flex justify-end'>
+                    <RightMotion>
                     <div className='relative h-[25vh] w-full md:w-[55vw] md:h-[50vh] mt-10 z-0'>
                         <Image src={data.illustration.url} objectFit="contain" objectPosition="center bottom" layout='fill' />
                     </div>
+                    </RightMotion>
                 </div>
             </div>
 

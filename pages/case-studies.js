@@ -6,6 +6,8 @@ import Logo from '../components/Logo'
 import Button from '../components/Button'
 import TwoColLayout from '../components/TwoColLayout'
 import Link from 'next/link'
+import SoftMotion from '../components/SoftMotion'
+import RightMotion from '../components/RightMotion'
 
 export async function getStaticProps() {
 
@@ -34,12 +36,13 @@ export default function CaseStudies({work}) {
                     <div className='md:grid grid-cols-2 gap-7 ml-5 mr-[10vw] xxl:mx-16 xxl:gap-12 xxl:mr-[12vw]'>
                     {work.map((proj, i) => (
                         <div key={i} className={`${proj.size === 'medium' ? 'col-span-1' : 'col-span-2'}`}>
+                            <SoftMotion>
                             {proj.size === 'medium' 
                             ? <div className='space-y-5 mb-5 md:mb-0 md:space-y-3 xxl:space-y-8'>
                                 <div className='relative w-full h-[60vh]'>
                                     <Image src={proj.thumbnail.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                                 </div>
-                                <div className='rounded-2xl border border-black p-2 w-fit hover:bg-white xxl:text-3xl xxl:p-8 xxl:w-[40%]'>
+                                <div className='rounded-2xl border border-black p-2 w-fit md:w-1/2 hover:bg-white xxl:text-3xl xxl:p-8 xxl:w-[40%]'>
                                 <Link href={`/work/${proj.slug}`}>
                                     <a>
                                         <div className='uppercase'>{proj.client}</div>
@@ -64,13 +67,16 @@ export default function CaseStudies({work}) {
                                 </div>
                             </div>
                             }
+                            </SoftMotion>
                         </div>
                     ))}
                     </div>
                     <div className='flex justify-end mx-7 xxl:mx-16 py-10'>
+                        <RightMotion>
                         <div className='relative h-[30vh] md:h-[60vh] w-full md:w-[40vw]'>
                             <Image src='/clients_page.svg' objectFit='contain' layout='fill'/>
                         </div>
+                        </RightMotion>
                     </div>
                 </div>
             </div>

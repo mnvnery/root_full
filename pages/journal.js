@@ -5,6 +5,8 @@ import Header from '../components/Header'
 import Logo from '../components/Logo'
 import Button from '../components/Button'
 import TwoColLayout from '../components/TwoColLayout'
+import SoftMotion from '../components/SoftMotion'
+import {motion} from 'framer-motion'
 
 export async function getStaticProps() {
     const data = await request({
@@ -35,13 +37,18 @@ export default function Home({data, articles}) {
             <Logo url='/ROOT-logo-black.svg'/>
             <TwoColLayout cols='md:grid-cols-[0.3fr_0.7fr]' border='border-t border-white'>
                 <div className='pt-10'>
-                    <div className='uppercase text-3xl md:text-4xl xxl:text-6xl xxl:leading-tight'>OUR<br/>JOURNAL</div>
+                    <SoftMotion>
+                        <div className='uppercase text-3xl md:text-4xl xxl:text-6xl xxl:leading-tight'>OUR<br/>JOURNAL</div>
+                    </SoftMotion>
                 </div>
-                <div className='pt-10 md:ml-8 xxl:ml-14'>
-                    <div dangerouslySetInnerHTML={{__html: data.journalText}} className='paragraph md:text-xl md:w-3/4 mb-14 xxl:mb-20 xxl:text-4xl xxl:leading-tight'/>
+                <div className='pt-10 md:ml-10 xxl:ml-14'>
+                    <SoftMotion>
+                        <div dangerouslySetInnerHTML={{__html: data.journalText}} className='paragraph md:text-xl md:w-3/4 mb-14 xxl:mb-20 xxl:text-4xl xxl:leading-tight'/>
+                    </SoftMotion>
                 </div>
             </TwoColLayout>
             <div className='mx-7 md:mx-[25vw] mb-12 xxl:mb-20'>
+                <SoftMotion>
                 <div className='relative h-[30vh] md:h-[50vh] mb-8'>
                     <Image src={firstArticle.image.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                 </div>
@@ -55,11 +62,15 @@ export default function Home({data, articles}) {
                         <Button text='READ MORE +' href={`/journal/${firstArticle.slug}`} mainColour='border-white hover:bg-white hover:text-black'/>
                     </div>
                 </div>
+                </SoftMotion>
             </div>
             <div className='grid grid-cols-2 md:grid-cols-4 mx-7 xxl:mx-16 gap-6 md:text-lg pb-20 xxl:text-3xl'>
                 
                 {articles.slice(1, 4).map((article, i) => (
-                    <div key={i}>
+                    <motion.div key={i}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ stiffness: 50, duration: 0.7, delay: `0.${i}` }}>
                         <div className='relative h-[20vh] md:h-[40vh] xxl:h-[30vh] mb-8'>
                             <Image src={article.image.url} layout='fill' objectFit='cover' className='rounded-2xl'/>
                         </div>
@@ -69,7 +80,7 @@ export default function Home({data, articles}) {
                         <div className='my-10'>
                         <Button text='READ MORE +' href={`/journal/${article.slug}`} mainColour='border-white hover:bg-white hover:text-black'/>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>
