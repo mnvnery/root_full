@@ -66,7 +66,7 @@ export default function Home({data, articles}) {
             </div>
             <div className='grid grid-cols-2 md:grid-cols-4 mx-7 xxl:mx-16 gap-6 md:text-lg pb-20 xxl:text-3xl'>
                 
-                {articles.slice(1, 4).map((article, i) => (
+                {articles.slice(1, 8).map((article, i) => (
                     <motion.div key={i}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
