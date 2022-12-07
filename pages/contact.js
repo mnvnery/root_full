@@ -9,7 +9,7 @@ import WorkList from '../components/WorkList'
 import TeamCard from '../components/TeamCard'
 import SoftMotion from '../components/SoftMotion'
 import {motion} from 'framer-motion'
-import RightMotion from '../components/RightMotion'
+import LeftMotion from '../components/LeftMotion'
 
 export async function getStaticProps() {
     const data = await request({
@@ -100,11 +100,11 @@ export default function Contact({data, work, team}) {
                   </div>
             </div>
             <div className='bg-black'>
-              <RightMotion>
+              <LeftMotion>
               <div className='relative h-[30vh] md:h-[70vh] w-[90%] mx-auto md:w-full'>
                 <Image src='/media-doing-good.svg' layout='fill' objectFit='contain'/>
               </div>
-              </RightMotion>
+              </LeftMotion>
             </div>
         </div>
         </>

@@ -30,7 +30,7 @@ export async function getStaticProps() {
 export default function About({data, work}) {
     return (
         <>
-        <div className='bg-pink overflow-x-hidden w-full'>
+        <div className='bg-pink'>
         <Header colour='black' bgColour='pink'/>
         <Logo url='/ROOT-logo-orange.svg'/>
         <div className='bg-grey'>
@@ -50,7 +50,7 @@ export default function About({data, work}) {
                         </SoftMotion>
                         <RightMotion>
                         <div className='relative w-full h-[35vh] md:w-[90%] md:h-[70vh] xxl:h-[60vh] mb-10'>
-                            <Image src={data.servicesImage.url} objectFit="cover" objectPosition="center bottom" layout='fill' className='rounded-3xl'/>
+                            <Image src={data.image1.url} objectFit="cover" objectPosition="center bottom" layout='fill' className='rounded-3xl'/>
                         </div>
                         </RightMotion>
                     </div>

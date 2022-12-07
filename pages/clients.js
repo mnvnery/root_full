@@ -44,7 +44,7 @@ export default function Clients({data, work}) {
     }
     return (
         <>
-        <div className='bg-yellow w-full overflow-x-hidden'>
+        <div className='bg-yellow'>
             <Header colour='black' bgColour='yellow'/>
             <Logo url='/ROOT-logo-orange.svg'/>
             <div className='bg-yellow text-black'>
@@ -78,11 +78,11 @@ export default function Clients({data, work}) {
                     </div>
                 </TwoColLayout>
                 <div className='px-7 xxl:px-16 pb-10 flex justify-end'>
-                    <RightMotion>
+                    <LeftMotion>
                     <div className='relative h-[25vh] w-full md:w-[55vw] md:h-[50vh] mt-10 z-0'>
                         <Image src={data.illustration.url} objectFit="contain" objectPosition="center bottom" layout='fill' />
                     </div>
-                    </RightMotion>
+                    </LeftMotion>
                 </div>
             </div>
 
