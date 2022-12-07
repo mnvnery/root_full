@@ -7,7 +7,7 @@ import Button from '../components/Button'
 import TwoColLayout from '../components/TwoColLayout'
 import Link from 'next/link'
 import SoftMotion from '../components/SoftMotion'
-import RightMotion from '../components/RightMotion'
+import LeftMotion from '../components/LeftMotion'
 
 export async function getStaticProps() {
 
@@ -72,11 +72,11 @@ export default function CaseStudies({work}) {
                     ))}
                     </div>
                     <div className='flex justify-end mx-7 xxl:mx-16 py-10'>
-                        <RightMotion>
+                        <LeftMotion>
                         <div className='relative h-[30vh] md:h-[60vh] w-full md:w-[40vw]'>
                             <Image src='/clients_page.svg' objectFit='contain' layout='fill'/>
                         </div>
-                        </RightMotion>
+                        </LeftMotion>
                     </div>
                 </div>
             </div>

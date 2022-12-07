@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
       <title>Root</title>
       <meta name='description' content='Root is a complete media planning and buying service for nonprofits—the only one in the UK.'/>
     </Head>
-    <div className='bg-purple'><Component {...pageProps} /></div>
+    <Component {...pageProps} />
     <Footer/>
     </>
   )

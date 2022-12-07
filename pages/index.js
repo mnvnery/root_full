@@ -34,7 +34,7 @@ export async function getStaticProps() {
 export default function Home({data, work}) {
   return (
     <>
-    <div className='bg-black w-full overflow-x-hidden'>
+    <div className='bg-black'>
       <Header colour='white' bgColour='black' />
       <Logo url='/ROOT-logo.svg'/>
       <div className='bg-purple'>
@@ -56,11 +56,11 @@ export default function Home({data, work}) {
             </div>
             </SoftMotion>
             <div className='pt-16 pb-5 md:py-5 self-end'>
-              <RightMotion>
+              <LeftMotion>
                 <div className='relative w-[50vw] h-[30vh] md:w-[24vw] md:h-[60vh] md:ml-[-2em]'>
                     <Image src={data.illustration.url} objectFit="contain" objectPosition="center bottom" layout='fill' />
                 </div>
-                </RightMotion>
+                </LeftMotion>
             </div>
             </div>
           </div>
@@ -77,10 +77,10 @@ export default function Home({data, work}) {
             </SoftMotion>
           </div>
           <div className='pt-7 md:pt-10 md:pl-20'>
-            <RightMotion>
+            <SoftMotion>
             <div dangerouslySetInnerHTML={{__html: data.clientsIntro}} className='paragraph text-2xl md:text-4xl xxl:text-6xl md:w-3/4 pb-2 md:pb-10'/>
             <Button text='See our clients +' href='/clients' mainColour='border-black hover:bg-black hover:text-purple text-lg md:text-2xl xxl:text-4xl'/>
-            </RightMotion>
+            </SoftMotion>
           </div>
           <div className='md:border-r border-black py-10'>
             <LeftMotion>
