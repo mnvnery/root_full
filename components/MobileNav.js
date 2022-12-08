@@ -106,7 +106,7 @@ const MobileNav = ({colour}) => {
                 >
                   <a onClick={onToggleNav}>
                   <div
-                    className={`px-4 py-1 2xl:py-10 text-black hover:text-white text-5xl font-bold text-center tracking-tight md:text-7xl xxl:text-9xl xxl:py-5`}
+                    className={`px-4 py-1 2xl:py-10 text-black hover:text-white text-5xl text-center tracking-tight md:text-7xl xxl:text-9xl xxl:py-5`}
                   >
                     {link.title}
                   </div>
