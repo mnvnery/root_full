@@ -10,6 +10,7 @@ import TeamCard from '../components/TeamCard'
 import SoftMotion from '../components/SoftMotion'
 import {motion} from 'framer-motion'
 import LeftMotion from '../components/LeftMotion'
+import siteMetadata from '../data/siteMetadata'
 
 export async function getStaticProps() {
     const data = await request({
@@ -32,7 +33,6 @@ export async function getStaticProps() {
 }
 
 export default function Contact({data, work, team}) {
-  console.log(data)
     return (
         <>
         <div className='bg-black'>
@@ -98,6 +98,7 @@ export default function Contact({data, work, team}) {
                       </div>
                     ))}
                   </div>
+                  <a href={`mailto:${siteMetadata.email}`}><div className='md:text-2xl xxl:text-4xl mb-10 border border-white rounded-xl hover:bg-white hover:text-black xxl:rounded-3xl uppercase inline-block px-3 py-2 xxl:px-8 xxl:py-6'>GET IN TOUCH +</div></a>
             </div>
             <div className='bg-black'>
               <LeftMotion>

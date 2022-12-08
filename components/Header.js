@@ -92,8 +92,8 @@ const Header = ({colour, bgColour}) => {
         }`}
         >
         <div className="flex items-center justify-between mx-6 py-6 border-b border-black mb-5 xxl:mx-16">
-            <Link href="/" className="w-3/5 md:w-1/4" onClick={onToggleNav}>
-            <div className="relative w-7 h-12 cursor-pointer">
+            <Link href="/" className="w-3/5 md:w-1/4">
+            <div  onClick={onToggleNav} className="relative w-7 h-12 cursor-pointer">
                 <Image src={'/small_logo_black.svg'} layout='fill' objectFit='contain' />
             </div>
             </Link>
@@ -125,7 +125,7 @@ const Header = ({colour, bgColour}) => {
                 >
                     <a onClick={onToggleNav}>
                     <div
-                    className={`px-4 py-1 md:py-3 text-black hover:text-white text-5xl font-bold text-center tracking-tight md:text-7xl xxl:text-9xl xxl:py-5`}
+                    className={`px-4 py-1 md:py-3 text-black hover:text-white text-5xl text-center tracking-tight md:text-7xl xxl:text-9xl xxl:py-5`}
                     >
                     {link.title}
                     </div>
