@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="flex justify-between">
-            <div className="pt-4 pb-8 text-lg xxl:text-4xl xxl:pt-6">Design by: <a href="https://studiodbd.com" target='_blank' className="hover:underline">StudioDBD</a></div>
+            <div className="pt-4 pb-8 text-lg xxl:text-4xl xxl:pt-6">Design by: <a href="https://studiodbd.com" target='_blank' rel="noreferrer" className="hover:underline">StudioDBD</a></div>
             <div className="relative w-[60%] md:w-1/5 h-auto mt-2">
                 <Image src='/logos_footer.png' width='912' height='263'/>
             </div>
